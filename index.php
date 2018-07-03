@@ -24,5 +24,6 @@ and open the template in the editor.
                      </table>
                 </div>
             </form>
+        <p class ="info"><?php echo $_SERVER['REMOTE_ADDR']; ?></p>
     </body>
 </html>

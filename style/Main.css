@@ -118,6 +118,10 @@ p.subheader
 	font-family: helvetica;
 	font-size: 18px;
 }
+p.info 
+{
+    color: white;
+}
 #h{
     font-family:helvetica;
     font-size:25px;
