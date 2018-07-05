@@ -4,6 +4,11 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+<?php 
+    require_once('lib/BrowserDetection.php');
+    $browser = new BrowserDetection;
+    $userAgent = $browser->getUserAgent();
+?>
 <html>
     <link rel = "stylesheet" type = "text/css" HREF = "style/Main.css">
     <head>
@@ -12,7 +17,7 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        
+        <p class ="info"><?php echo $_SERVER['REMOTE_ADDR']; ?> on <?php echo $userAgent ?></p>
             <form method="post" action="index.jsp">
                 <div class ="center">
                     <table class="register">
@@ -24,6 +29,5 @@ and open the template in the editor.
                      </table>
                 </div>
             </form>
-        <p class ="info"><?php echo $_SERVER['REMOTE_ADDR']; ?></p>
     </body>
 </html>
